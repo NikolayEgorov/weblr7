@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/main.css">
+
+        <title>Лабораторна робота №4 | Головна</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <h4>Для пропозицій партнерства звертатися за телефоном: (050)123-45-67</h4>
+        </header>
+
+        <nav>
+            <ul class="menu">
+                <li class="menu-item"><a href="index.php">Головна</a></li>
+                <li class="menu-item"><a href="history.html">Історія</a></li>
+                <li class="menu-item"><a href="program.html">Політична програма</a></li>
+                <li class="menu-item"><a href="blogs.html">Блоги</a></li>
+                <li class="menu-item"><a href="gallery.html">Фотогалерея</a></li>
+                <li class="menu-item"><a href="contacts.html">Контакти</a></li>
+                <li class="menu-item active"><a href="questions.html">Опитування</a></li>
+
+                <li id="lang-link" class="menu-item"><a href="javascript:void(0)"></a></li>
+            </ul>
+        </nav>
+
+        <div id="errors-alert" class="alert alert-danger d-none" role="alert"></div>
+
+        <section id="questions">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <form id="question-form-1">
+                            <div class="row mt-2 mb-5">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-12">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Ім'я</label>
+                                                <input type="text" name="name" class="form-control" id="exampleFormControlInput1">
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-md-4 col-sm-12">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput2" class="form-label">Прізвище</label>
+                                                <input type="email" name="surname" class="form-control" id="exampleFormControlInput2">
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-md-4 col-sm-12">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput3" class="form-label">Email address</label>
+                                                <input type="email" name="email" class="form-control" id="exampleFormControlInput3" placeholder="name@example.com">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <label>Яка з українських політичних партій Вам найбільше імпонує</label>
+                                <div class="col-sm-12">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="partiya" id="partiya-1" value="1">
+                                        <label class="form-check-label" for="partiya-1">
+                                            Наша Україна
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="partiya" id="partiya-2" value="2">
+                                        <label class="form-check-label" for="partiya-2">
+                                            Європейська солідарність
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="partiya" id="partiya-3" value="3">
+                                        <label class="form-check-label" for="partiya-3">
+                                            Соціалістична партія України
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="partiya" id="partiya-4" value="4">
+                                        <label class="form-check-label" for="partiya-4">
+                                            Голос
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="partiya" id="partiya-5" value="5">
+                                        <label class="form-check-label" for="partiya-5">
+                                            Самопоміч
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="partiya" id="partiya_6">
+                                        <label class="form-check-label" for="flexRadioDefault6">
+                                            БЮТ
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-5 mb-5">
+                                <label>Хто з членів нашої партії Вам відомі</label>
+                                <div class="col-sm-12">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" name="persons" value="1" id="flexCheckDefault1">
+                                        <label class="form-check-label" for="flexCheckDefault1">
+                                            Віктор Ющенко
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" name="persons" value="2" id="flexCheckChecked2">
+                                        <label class="form-check-label" for="flexCheckChecked2">
+                                            Юрій Луценко
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" name="persons" value="3" id="flexCheckChecked3">
+                                        <label class="form-check-label" for="flexCheckChecked3">
+                                            Ірина Геращенко
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" name="persons" value="4" id="flexCheckChecked4">
+                                        <label class="form-check-label" for="flexCheckChecked4">
+                                            Андрій Шкіль
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" name="persons" value="4" id="flexCheckChecked5">
+                                        <label class="form-check-label" for="flexCheckChecked5">
+                                            Роман Безсмертний
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">Опишіть свої політичні погляди</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                                    data-type="textarea" data-required="1" data-question-number="третє"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">Ваша думка щодо ринку землі</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                                    data-type="textarea" data-required="1" data-question-number="четверте"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea2" class="form-label">Ваше ставлення до євроінтеграції України</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"
+                                                    data-type="textarea" data-required="1" data-question-number="п'яте"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea3" class="form-label">
+                                                    Ваше ставлення до євроатлантичної інтеграції України
+                                                </label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea3" rows="3"
+                                                    data-type="textarea" data-required="1" data-question-number="шосте"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea4" class="form-label">Що у вас на думці (не обов'язково)</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea4" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-5 mb-5">
+                                <div class="col-md-2 col-sm-3">
+                                    <button onclick="return false;" data-type="submit-btn-1" class="btn btn-success">Відповісти</button>
+                                </div>
+                                <div class="col-md-2 col-sm-3">
+                                    <button onclick="return false;" data-type="clear-btn" class="btn btn-danger">Очистити</button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <form id="question-form-2" class="d-none">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlTextarea5" class="form-label">Ваша думка щодо ринку землі</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-5 mb-5">
+                                <div class="col-md-2 col-sm-3">
+                                    <button onclick="return false;" data-type="submit-btn-2" class="btn btn-success">Відправити на Email</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <ul>
+                <li class="footer-item"><a href="index.php">Головна</a></li>
+                <li class="footer-item"><a href="history.html">Історія</a></li>
+                <li class="footer-item"><a href="program.html">Політична програма</a></li>
+                <li class="footer-item"><a href="blogs.html">Блоги</a></li>
+                <li class="footer-item"><a href="gallery.html">Фотогалерея</a></li>
+                <li class="footer-item"><a href="contacts.html">Контакти</a></li>
+                <li class="footer-item active"><a href="questions.html">Опитування</a></li>
+            </ul>
+        </footer>
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="assets/js/questions.js"></script>
+
+        <script>
+            function showErrors(errors) {
+                let message = '',
+                    alert = document.getElementById("errors-alert");
+
+                errors.map((e) => {
+                    message += e + "\n";
+                });
+
+                alert.innerText = message;
+                alert.classList.remove('d-none');
+                alert.scrollIntoView();
+            }
+
+            function showSecondForm() {
+                document.getElementById("question-form-1").classList.add("d-none");
+
+                let data = document.getElementById("exampleFormControlTextarea1").value;
+                document.getElementById("exampleFormControlTextarea5").innerText = data;
+
+                document.getElementById("question-form-2").classList.remove("d-none");
+            }
+
+            function sendToEmail() {
+                alert("Ваша відповідь зарахована! Дякуємо!");
+            }
+
+            document.querySelector('[data-type="clear-btn"]').addEventListener('click', () => {
+                let form = document.getElementById("question-form-1"),
+                    elements = form.querySelectorAll("textarea,input");
+
+                Array.from(elements).map((e) => {
+                    if(e.getAttribute("type") === null) e.value = "";
+                    else {
+                        if(e.getAttribute("type") === "text" || e.getAttribute("type") === "email") {
+                            e.value = "";
+                        } else if(e.getAttribute("type") === "radio" || e.getAttribute("type") === "checkbox") {
+                            e.checked = false;
+                        }
+                    }
+                });
+            });
+
+            document.querySelector('[data-type="submit-btn-1"]').addEventListener('click', (e) => {
+                document.getElementById("errors-alert").classList.add('d-none');
+                
+                let errors = [],
+                    name = document.getElementById("exampleFormControlInput1").value,
+                    surname = document.getElementById("exampleFormControlInput2").value,
+                    email = document.getElementById("exampleFormControlInput3").value;
+                
+                if(name === "") errors.push("Заповніть ім'я");
+                if(surname === "") errors.push("Заповніть прізвище");
+                if(email === "") errors.push("Заповніть email");
+
+                let partiya = document.querySelector('input[name="partiya"]:checked');
+                if(partiya === null) errors.push("Оберіть відповідь на перше запитання");
+
+                let persons = [];
+                Array.from(document.querySelectorAll('input[name="persons"]:checked')).map((e) => {
+                    persons.push(e.value);
+                });
+                if(persons.length === 0) errors.push("Оберіть відповідь на друге запитання");
+
+                Array.from(document.querySelectorAll('[data-type="textarea"]')).map((e) => {
+                    if(e.getAttribute('data-required') === "1" && e.value === "") {
+                        errors.push("Дайте відповідь на " + e.getAttribute("data-question-number") + " питання")
+                    }
+                });
+
+                if(errors.length > 0) showErrors(errors);
+                else showSecondForm();
+            });
+
+            document.querySelector('[data-type="submit-btn-2"]').addEventListener('click', (e) => {
+                sendToEmail();
+            });
+        </script>
+    </body>
+</html>
