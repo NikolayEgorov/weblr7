@@ -12,4 +12,9 @@ if(! preg_match('/^[\+]?(380)[0-9]{7}/', $phone)) {
     $errors[] = ['phone' => "Невірний формат номеру телефону"];
 }
 
-die(json_encode(['status' => !(count($errors)), 'data' => [], 'errors' => $errors]));
+$comment_array = [];
+foreach (explode(" ", $_POST['comment']) as $word) {
+    $comment_array[] = strrev($word);
+}
+
+die(json_encode(['status' => !(count($errors)), 'data' => ['comment' => implode(" ", $comment_array)], 'errors' => $errors]));

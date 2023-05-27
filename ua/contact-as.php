@@ -60,7 +60,7 @@
 
                     <div class="form-row">
                         <label for="comment">Ваш коментар</label>
-                        <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                        <textarea name="comment" id="comment" cols="30" rows="30"></textarea>
                         <label class="error-label"></label>
                     </div>
 
@@ -178,7 +178,7 @@
                     xhr.onload = function() {
                         let responseObj = xhr.response;
 
-                        if(responseObj.status) alert("Ваш відгук надіслано");
+                        if(responseObj.status) alert(responseObj.data.comment);
                         else {
                             responseObj.errors.map((er) => {
                                 let erArr = Object.entries(er)[0],
